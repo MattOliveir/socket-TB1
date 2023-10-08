@@ -45,6 +45,18 @@ def user_input():
             app_manager.handle_udp(host, port)
 
         elif choice == '5':
+            host = input(
+                "Insira o endereço IP do servidor (deixe em branco para localhost): ")
+            port = int(input("Insira a porta do servidor: "))
+            app_manager.receive_file_udp(host, port)
+
+        elif choice == '6':
+            host = input(
+                "Insira o endereço IP do servidor (deixe em branco para localhost): ")
+            port = int(input("Insira a porta do servidor: "))
+            app_manager.serve_file_udp(host, port)
+
+        elif choice == '9':
             print("Saindo...")
             break
 

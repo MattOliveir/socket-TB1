@@ -31,8 +31,6 @@ class ClienteUDP:
         """Cria conecção de Socket"""
         udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         destino = (self.host, self.port)
-        
-        udp.bind(destino)
 
         """Caminho da salvamento do arquivo alvo"""
         file_path = input("Enter the path to save the received file: ")
